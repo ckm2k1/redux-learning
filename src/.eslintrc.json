@@ -1,0 +1,22 @@
+{
+  "rules": {
+    "comma-dangle": 0,
+    "no-undef": 2,
+    "max-len": [2, {
+      "code": 120
+    }]
+  },
+  "env": {
+      "webextensions": true,
+      "node": true,
+      "browser": true,
+      "shared-node-browser": true,
+      "commonjs": true
+    },
+    "globals": {
+      "Promise": true,
+      "ArrayBuffer": true,
+      "Uint16Array": true,
+      "Uint8Array": true
+    }
+}

@@ -1,10 +1,21 @@
-import { combineReducers, createStore } from 'redux';
-import member from './reducers/member';
-import assets from './reducers/assets';
-import device from './reducers/device';
-import environment from './reducers/environment';
+import {combineReducers, createStore, applyMiddleware} from 'redux';
+import thunk from 'redux-thunk';
+import * as member from './reducers/member';
+import * as assets from './reducers/assets';
+import * as device from './reducers/device';
+import * as environment from './reducers/environment';
 
-let reducer = combineReducers(member, assets, device, environment);
-let store = createStore(reducer);
+let reducers = {
+  ...member,
+  ...assets,
+  ...device,
+  ...environment
+};
+
+
+let reducer = combineReducers(reducers);
+let store = createStore(reducer, applyMiddleware(thunk));
+
+window.store = store;
 
 export default store;

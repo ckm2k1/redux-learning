@@ -6,4 +6,3 @@ export const SET_MEMBER_NAME = 'SET_MEMBER_NAME';
 export const CREATE_ASSET = 'CREATE_ASSET';
 export const UPDATE_ASSET = 'UPDATE_ASSET';
 export const DELETE_ASSET = 'DELETE_ASSET';
-export const READ_ASSET = 'READ_ASSET';
